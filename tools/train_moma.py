@@ -50,7 +50,7 @@ logger = logging.getLogger("detectron2")
 
 # Right now we are just using COCOEvaluator... (may want to modify, so we have this)
 class MOMAEvaluator(COCOEvaluator):
-    def __init__(self, *args, **kwards):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         
     
