@@ -1,7 +1,7 @@
 from detectron2.data import DatasetCatalog
 from momaapi import MOMA
-        
-        
+
+
     
 def create_dataset(moma, split, classes):
     ids_hoi = moma.get_ids_hoi(split=split)
@@ -32,6 +32,8 @@ def create_dataset(moma, split, classes):
                     "bbox_mode": BoxMode.XYWH_ABS,
                     "category_id": class_id,
                 }
+                if actor_cname == "crowd":
+                    obj["iscrowd"] = 1 # Set iscrowd to be true for crowds
                 objs.append(obj)
             # else:
             #     print("actor_cname has 0 instance:", actor_cname)
