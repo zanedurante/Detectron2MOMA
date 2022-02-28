@@ -1,5 +1,7 @@
 <img src=".github/Detectron2-Logo-Horz.svg" width="300" >
 
+Modified version of Detectron2 for the MOMA project.  The original MOMA readme is below.
+
 Detectron2 is Facebook AI Research's next generation library
 that provides state-of-the-art detection and segmentation algorithms.
 It is the successor of
